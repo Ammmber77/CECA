@@ -13,7 +13,10 @@ st.caption("Chinese-English Course Alignment Assistant — 上传英方课程PDF
 
 with st.sidebar:
     st.header("设置 ^-^")
-    api_key = st.text_input(
+    try:
+        api_key = st.secrets["DEEPSEEK_API_KEY"]
+    except (KeyError, FileNotFoundError):
+        api_key = st.text_input(
         "大模型 API Key",
         type="password",
         help="输入你的API Key，支持OpenAI兼容接口"
