@@ -20,12 +20,12 @@ with st.sidebar:
     )
     api_base = st.text_input(
         "API Base URL（可选）",
-        value="https://api.openai.com/v1",
+        value="https://api.deepseek.com/v1",
         help="如果使用第三方兼容API，修改此地址"
     )
     model_name = st.text_input(
         "模型名称",
-        value="gpt-4o-mini",
+        value="deepseek-chat",
         help="如使用第三方API，填入对应模型名"
     )
     st.divider()
@@ -116,7 +116,7 @@ if st.session_state.pdf_uploaded:
                         try:
                             client = OpenAI(
                                 api_key=api_key,
-                                base_url=api_base
+                                base_url="https://api.deepseek.com/v1"
                             )
 
                             prompt = f"""你是一个中英课程对齐助手，服务于需要的学生。
