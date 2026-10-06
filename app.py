@@ -52,7 +52,7 @@ st.title("CECA 中英课程对齐助手")
 col_status1, col_status2 = st.columns([3, 1])
 with col_status2:
     st.success("模型已连接")
-st.info("tip：若页面出现 'Zzz' 休眠提示，点击 'Yes, get this app back up' 唤醒^-^")
+st.info("tip：若页面出现 'Zzz' 休眠提示，点击 'Yes, get this app back up' 唤醒")
 st.caption("Chinese-English Course Alignment Assistant — 上传英方课程PDF,点击可获得中文对齐结果")
 
 with st.sidebar:
@@ -102,9 +102,9 @@ with st.sidebar:
     with st.expander("关于作者"):
         st.markdown("""
         **Ammmber77**| 2026级^-^
-        独立完成从需求分析、前端开发、后端逻辑到云端部署的全流程
-        核心为Prompt工程、PDF结构化切分算法、及云端部署的Secrets安全机制
-        由于技术栈尚浅，本项目参考了开源Streamlit框架的基础搭建逻辑（叠甲算是
+        *   **独立完成从需求分析、前端开发、后端逻辑到云端部署的全流程**
+        *   **核心技术：Prompt工程、PDF结构化切分算法、及云端部署的Secrets安全机制**
+        *   **由于技术栈尚浅，本项目参考了开源Streamlit框架的基础搭建逻辑**
         """)
 
 # ===== 初始化 session state =====
@@ -254,7 +254,7 @@ if st.session_state.pdf_uploaded:
                 )
 
 else:
-    st.info("请先上传一个英方课程PDF文件吧")
+    st.info("请先上传一个英方课程PDF文件吧^-^")
     st.markdown("""
     ### 关于 CECA
     
